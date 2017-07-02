@@ -13,7 +13,7 @@ namespace PeopleConsoleApplication.Repo.Entities
         }
 
         public virtual DbSet<Person> People { get; set; }
-        public virtual int? InsertPerson(PersonDto personEntity)
+        public virtual int? InsertPerson(Person personEntity)
         {
             int? personId = default(int?);
 
