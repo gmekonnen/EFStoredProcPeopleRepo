@@ -7,55 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PeopleConsoleApplication.Repo
+namespace PeopleConsoleApplication.Repo<T> :where T is a calss
 {
+ private  PeopleDbContext _dbContext;
+    public PeopleRepository(PeopleDbContext dbContext){
+        this._dbContext=dbContext;//This will be injected using dependencyt injection tool such as Autofac, It will be instantiated ones and reused reused through out
+    }
     public class PeopleRepository
     {
-        public int? InsertPerson(PersonDto personEntity)
+        public int? InsertPerson(PersonDto personDto)
         {
-            int? personId = default(int?);
-
-            if (personEntity != null)
-            {
-                var sqlParams = new List<SqlParameter>();
-
-                var personIdOutputParam = new SqlParameter()
-                {
-                    Direction = System.Data.ParameterDirection.Output,
-                    ParameterName = "@personId",
-                    Value = 0,
-                    DbType = System.Data.DbType.Int32
-                };
-
-                sqlParams.Add(personIdOutputParam);
-
-                sqlParams.Add(new SqlParameter()
-                {
-                    ParameterName = "@personName",
-                    Value = personEntity.Name,
-                   
-                });
-
-                sqlParams.Add(new SqlParameter()
-                {
-                    ParameterName = "@registredOn",
-                    Value = personEntity.RegistredOn,
-                   
-                });
-
-                using (var context = new PeopleDbContext())
-                {
-                    var commandText = "exec [dbo].[InsertPerson] @personName, @registredOn, @personId OUTPUT";
-                    var result = context.Database.ExecuteSqlCommand(commandText, sqlParams.ToArray());
-
-                    int newPersonId = 0;
-
-                    if (int.TryParse(personIdOutputParam.Value.ToString(), out newPersonId))
-                    {
-                        personId = newPersonId;
-                    }
-                }
-            }
+           //Move this to PeopleDbContext and add it as one of virual method and call it from here
+         int personId=0;
+         try
+         {
+          personId=  _dbContext.InsertPerson(factoryClass.GetPersoEntity(personDto));//This factory calss will do auto mapping between Dto and Entity class
+          }
+           Catch(Exception ex)
+           {
+           //Do some thing with it
+           }
             return personId;
         }
 
