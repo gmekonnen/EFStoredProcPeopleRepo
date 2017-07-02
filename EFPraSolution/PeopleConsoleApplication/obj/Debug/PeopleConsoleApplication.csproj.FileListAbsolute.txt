@@ -1,0 +1,10 @@
+C:\Users\meadorable\Source\Repos\EFStoredProcPeopleRepo\EFPraSolution\PeopleConsoleApplication\obj\Debug\PeopleConsoleApplication.csprojResolveAssemblyReference.cache
+C:\Users\meadorable\Source\Repos\EFStoredProcPeopleRepo\EFPraSolution\PeopleConsoleApplication\bin\Debug\PeopleConsoleApplication.exe.config
+C:\Users\meadorable\Source\Repos\EFStoredProcPeopleRepo\EFPraSolution\PeopleConsoleApplication\bin\Debug\PeopleConsoleApplication.exe
+C:\Users\meadorable\Source\Repos\EFStoredProcPeopleRepo\EFPraSolution\PeopleConsoleApplication\bin\Debug\PeopleConsoleApplication.pdb
+C:\Users\meadorable\Source\Repos\EFStoredProcPeopleRepo\EFPraSolution\PeopleConsoleApplication\bin\Debug\EntityFramework.dll
+C:\Users\meadorable\Source\Repos\EFStoredProcPeopleRepo\EFPraSolution\PeopleConsoleApplication\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\meadorable\Source\Repos\EFStoredProcPeopleRepo\EFPraSolution\PeopleConsoleApplication\bin\Debug\EntityFramework.xml
+C:\Users\meadorable\Source\Repos\EFStoredProcPeopleRepo\EFPraSolution\PeopleConsoleApplication\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\meadorable\Source\Repos\EFStoredProcPeopleRepo\EFPraSolution\PeopleConsoleApplication\obj\Debug\PeopleConsoleApplication.exe
+C:\Users\meadorable\Source\Repos\EFStoredProcPeopleRepo\EFPraSolution\PeopleConsoleApplication\obj\Debug\PeopleConsoleApplication.pdb
